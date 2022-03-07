@@ -1,0 +1,95 @@
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="./colorjoe.css"
+    />  
+
+  </head>
+  <body>
+    <h1>paper</h1>
+    <div id="all-container">
+      <span id="layerd-canvas-area">
+        <canvas
+          id="draw-area"
+          width="500px"
+          height="500px"
+          style="border: 1px solid #000000; position: absolute;"
+        ></canvas>
+        <!--描くためのcanvasの設定-->
+        <canvas
+          id="line-width-indicator"
+          width="500px"   
+          height="500px"
+          style="border: 1px solid #000000;"
+        ></canvas>
+        <!--保存するためのcanvasの設定-->
+      </span>
+      <div id="right">
+        <div>
+          <div>
+            <button id="clear-button" class="menu">全消し</button><!--全消しボタン設定-->
+          </div>
+          <div>
+            <button id="eraser-button" class="menu">消しゴムモード</button><!--消しゴムボタン設定-->
+          </div>
+          <div>
+            文字の太さ
+            <span id="line-width">5</span><!--線の太さ-->
+          </div>
+          </div>
+          <input
+            id="range-selector"
+            type="range"
+            value="5"
+            min="1"
+            max="50"
+            step="0.1"
+          />
+          <input
+            id="line-width-number-field"
+            type="number"
+            value="5"
+            min="1"
+            max="50"
+            step="0.1"
+          />
+        </div>
+        <!--文字の太さ設定-->
+        <div>
+          <span id="color-palette"></span>
+        </div>
+        <div id="wrapper">
+          <canvas id="canvas"></canvas>
+        </div>
+        <!--カラーパレット-->
+      </div>
+    </div>
+    <a href="#" id="download" download="canvas.jpg">
+    ダウンロードはこちら
+    </a>
+    <style>
+      #all-container {
+        display: flex;
+        flex-direction: row;
+      }
+      #right {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      .menu {
+        margin-bottom: 20px;
+      }
+    </style>
+      </body>
+    <!--ボタン大きさ、場所-->>
+    <script src="./colorjoe.min.js"></script>
+    <script src="./oekaki.js"></script>
+    <!--リンク先-->
+  </body>
+</html>

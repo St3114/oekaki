@@ -1,0 +1,22 @@
+<html>
+<body>
+
+<canvas id="megane_canvas" width=256 height=256 style="border: 1px solid;"></canvas>
+
+<script>
+
+function draw() {
+megane_context.drawImage(img, 0, 0);
+}
+
+var megane_context = document.getElementById('megane_canvas').getContext('2d');
+
+var img = new Image();
+
+img.onload = draw;
+img.src = 'megane.jpg';
+
+</script>
+
+</body>
+</html>
